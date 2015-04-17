@@ -1,19 +1,11 @@
 module Main (
-    main,
-    getTypeParents
+    main
   ) where
 
-import GHC
-import GHC.Paths --libdir
 import Language.Haskell.Exts
 import Language.Haskell.Exts.Syntax
 
 import System.Environment ( getArgs )
-
-getTypeParents :: GhcMonad m => String -> [String] -> m String
-getTypeParents aType tsTypes = do
-  names <- GHC.parseName aType
-  return "HOLA"
 
 main = do
   args <- getArgs
